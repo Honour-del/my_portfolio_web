@@ -64,9 +64,9 @@ class Services extends StatelessWidget {
                 children: [
                   CarouselSlider(
                     items: [
-                      Content(title: "Web&ApDesign", body: web_app, image: "images/web-design.jpg"),
-                      Content(title: "Web Development", body: web, image: "images/web-development.jpg"),
-                      Content(title: "Mobile Development", body: mobile, image: "images/mobile-development.jpg"),
+                      Content(title: "Web&ApDesign", body: web_app, image: "assets/images/web-design.jpg"),
+                      Content(title: "Web Development", body: web, image: "assets/images/web-development.jpg"),
+                      Content(title: "Mobile Development", body: mobile, image: "assets/images/mobile-development.jpg"),
                     ],
                     options: CarouselOptions(
                       height: getProportionateScreenHeight(600),
@@ -117,8 +117,8 @@ class _CarouselBarState extends State<CarouselBar> {
         child: CarouselSlider(
             items: [
               textWithIcon("Web&App Design", const FaIcon(FontAwesomeIcons.computer, color: Colors.black, size: 30,),),
-              textWithIcon("Web Development", const FaIcon(FontAwesomeIcons.baby),),
-              textWithIcon("Mobile Development", const FaIcon(FontAwesomeIcons.baby),)
+              textWithIcon("Web Development", const FaIcon(FontAwesomeIcons.server, color: Colors.black, size: 30,),),
+              textWithIcon("Mobile Development", const FaIcon(FontAwesomeIcons.phone, color: Colors.black, size: 30,),)
             ],
             options: CarouselOptions(
               height: getProportionateScreenHeight(600),

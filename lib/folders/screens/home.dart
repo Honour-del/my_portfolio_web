@@ -10,7 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio_web/folders/data/strings_data.dart';
 import 'package:my_portfolio_web/folders/screens/about.dart';
 import 'package:my_portfolio_web/folders/screens/contact.dart';
-import 'package:my_portfolio_web/folders/screens/portfolio.dart';
+// import 'package:my_portfolio_web/folders/screens/portfolio.dart';
 import 'package:my_portfolio_web/folders/screens/resume.dart';
 import 'package:my_portfolio_web/folders/screens/services.dart';
 import 'package:my_portfolio_web/folders/utils/anime.dart';
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.red,
                             image: const DecorationImage(
                               image: AssetImage(
-                                "images/stack_programmer.png"
+                                "assets/images/stack_programmer.png"
                               ),
                               fit: BoxFit.cover
                             ),
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                               image: const DecorationImage(
                                 image: AssetImage(
-                                    "images/stack_design.png"
+                                    "assets/images/stack_design.png"
                                 ),
                                 fit: BoxFit.cover
                               ),
@@ -168,7 +168,7 @@ class WelcomePart extends StatelessWidget {
           onPressed: (){
             // Navigator.pushNamed(context, customDrawer.routeName);
             Navigator.push(context, MaterialPageRoute(
-                builder: (context) => const Portfolio()));
+                builder: (context) => const About()));
 
           },
           child: AutoSizeText(
@@ -195,7 +195,6 @@ class customDrawer extends StatelessWidget {
   static String routeName = "/customDrawer";
   @override
   Widget build(BuildContext context) {
-    // double wQuery = MediaQuery.of(context).size.width;
     return Padding(
       padding: padding.padding,
       child: ListView(
@@ -205,6 +204,9 @@ class customDrawer extends StatelessWidget {
               children: [
                 const CircleAvatar(
                   radius: 50,
+                  backgroundImage: AssetImage(
+                    "assets/images/avatar.jpg"
+                  ),
                 ),
                 SizedBox(
                   height: getProportionateScreenHeight(50),
@@ -304,12 +306,12 @@ customStack(BuildContext context){
           // width: 350,
           left: 200,
           top: 100,
-          child: stackContainer(Colors.red, 180, "images/stack_programmer.png"),
+          child: stackContainer(Colors.red, 180, "assets/images/stack_programmer.png"),
         ),
         Positioned(
           top: 200,
           left: 365,
-          child: stackContainer(Colors.blue, 180, "images/stack_design.png"),
+          child: stackContainer(Colors.blue, 180, "assets/images/stack_design.png"),
         ),
         // Align(
         //   alignment: Alignment.bottomRight,

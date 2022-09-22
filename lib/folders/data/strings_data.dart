@@ -2,7 +2,7 @@
 
 
 
-String bg = "images/b2.jpg";
+String bg = "assets/images/b2.jpg";
 
 // ignore: non_constant_identifier_names
 String porfolio_text = "Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis\n"

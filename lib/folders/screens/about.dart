@@ -132,7 +132,7 @@ class Mobile extends StatelessWidget {
               width: w,
               decoration: BoxDecoration(
                 image: const DecorationImage(image: AssetImage(
-                    "images/about.jpg"
+                    "assets/images/about.jpg"
                 ),
                   fit: BoxFit.cover
               ),

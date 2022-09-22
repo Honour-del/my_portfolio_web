@@ -284,14 +284,8 @@ class MobileC extends StatelessWidget {
           field( message, 'MESSAGE', 'message', 70),
           // field(controller, text, hint)
           const SizedBox(height: 40,),
-
-          if(Responsive.isDesktop(context))
             submitButton(() async{
-              _submit(context);
-            }),
-          if(Responsive.isMobile(context) || Responsive.isTablet(context))
-            submitButton(() async{
-              _submit(context);
+              await _submit();
             }),
         ],
       ),
@@ -315,13 +309,14 @@ class MobileC extends StatelessWidget {
   );
   }
 
- _submit(BuildContext context) {
+ _submit() {
      if (_formKey.currentState!.validate()){
-       if(Responsive.isDesktop(context)) {
-         openEmail();
-       }else if(Responsive.isTablet(context) || Responsive.isMobile(context)){
-         sendEmail();
-       }
+       openEmail();
+       // if(Responsive.isDesktop(context)) {
+       //   openEmail();
+       // }else if(Responsive.isTablet(context) || Responsive.isMobile(context)){
+       //   sendEmail();
+       // }
        name.clear();
        message.clear();
        email.clear();
